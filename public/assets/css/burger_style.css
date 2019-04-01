@@ -1,0 +1,17 @@
+body {
+    background-color: #eebbcc;
+    margin-top: 20px;
+}
+
+main {
+    background-color: blue;
+}
+
+img {
+    width: 200px;
+    height: auto;
+}
+
+.container{
+    text-align: center;
+}
