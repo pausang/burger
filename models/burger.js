@@ -8,16 +8,20 @@ selectAll: function(cb) {
     });
 },
 
-insertOne: function (cols, vals, cb) {
-    orm.insertOne("burgers", cols , vals, function(res){
-        cb(res);
-    });
+create: function (name, cb) {
+    orm.create("burgers", [
+        "burger_name", "devoured"
+    ], [
+        name, false
+    ], cb);
 },
-updateOne: function(objColVals, condition, cb){
-    orm.updateOne("burgers", objColVals, condition, function(res){
-        cb(res);
-    })
-},
+updateOne: function(id, cb){
+    var condition = "id=" + id;
+    orm.updateOne("burgers", {
+        devoured: true
+        
+    }, condition, cb);
+}
 
 };
 
